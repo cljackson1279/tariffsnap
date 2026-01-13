@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free tariff calculator for e-commerce businesses. Calculate import duties, tariffs, and landed costs for products from China, Mexico, India, Vietnam. Instant results for Shopify, Amazon FBA, Etsy sellers.">
+    <title>Tariff Calculator — Free Import Duty & Landed Cost Calculator for E-Commerce</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .calculator-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #f9fafb;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .calculator-box h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+
+        .info-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        .info-box p {
+            color: #92400e;
+            font-weight: 600;
+        }
+
+        /* Features */
+        .features {
+            background: #f9fafb;
+            padding: 60px 20px;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .feature p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* Tariff Table */
+        .tariff-table {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .tariff-table h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+        }
+
+        table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">TariffSnap</a>
+            <nav>
+                <a href="/tariff-calculator/">Calculator</a>
+                <a href="/pricing/">Pricing</a>
+                <a href="/blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Free Tariff Calculator for E-Commerce</h1>
+            <p>Calculate import duties, tariffs, and landed costs for your products instantly</p>
+            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Full Tariff Audit →</a>
+        </div>
+    </section>
+
+    <!-- Calculator Info -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-box">
+                <h2>How to Calculate Import Tariffs</h2>
+                
+                <div class="info-box">
+                    <p>💡 Want instant calculations for up to 50 SKUs? Get our complete tariff audit for $59 (normally $149) with KEEP/KILL/CHANGE PRICE recommendations.</p>
+                </div>
+
+                <h3 style="font-size: 24px; margin-bottom: 20px; color: #374151;">Manual Calculation Formula:</h3>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                    <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">Landed Cost = Product Cost + Shipping + (Product Cost × Tariff Rate)</p>
+                    
+                    <p style="margin-bottom: 10px;"><strong>Example:</strong></p>
+                    <ul style="margin-left: 20px; color: #6b7280;">
+                        <li>Product cost from China: $10</li>
+                        <li>Shipping: $2</li>
+                        <li>China tariff rate: 30%</li>
+                        <li><strong>Tariff amount:</strong> $10 × 0.30 = $3</li>
+                        <li><strong>Total landed cost:</strong> $10 + $2 + $3 = $15</li>
+                    </ul>
+                </div>
+
+                <h3 style="font-size: 24px; margin-bottom: 20px; color: #374151;">What You Need:</h3>
+                <ul style="margin-left: 20px; margin-bottom: 30px; color: #6b7280;">
+                    <li>Product cost (FOB price from supplier)</li>
+                    <li>Country of origin</li>
+                    <li>Product category (general, electronics, textiles, etc.)</li>
+                    <li>Shipping cost</li>
+                    <li>Current tariff rate (see table below)</li>
+                </ul>
+
+                <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Calculate 50 SKUs Instantly →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Use a Tariff Calculator?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>📊 Accurate Pricing</h3>
+                    <p>Know your true landed costs before setting retail prices. Avoid losing money on products with high tariffs.</p>
+                </div>
+                <div class="feature">
+                    <h3>💰 Maximize Margins</h3>
+                    <p>Identify which products are still profitable after tariffs and which ones to discontinue or reprice.</p>
+                </div>
+                <div class="feature">
+                    <h3>🚀 Fast Decisions</h3>
+                    <p>Make sourcing decisions quickly by comparing landed costs from different countries and suppliers.</p>
+                </div>
+                <div class="feature">
+                    <h3>📈 Scale Confidently</h3>
+                    <p>Expand your product catalog knowing exactly how tariffs will impact your margins on each SKU.</p>
+                </div>
+                <div class="feature">
+                    <h3>🌍 Multi-Country Support</h3>
+                    <p>Calculate tariffs for imports from China, Mexico, India, Vietnam, and other major sourcing countries.</p>
+                </div>
+                <div class="feature">
+                    <h3>🛒 Platform Agnostic</h3>
+                    <p>Works for Shopify, Amazon FBA, Etsy, WooCommerce, and any e-commerce platform.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tariff Table -->
+    <section class="tariff-table">
+        <div class="container">
+            <h2>Current US Import Tariff Rates (2026)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Country/Category</th>
+                        <th>Tariff Rate</th>
+                        <th>Common Products</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>China General</td>
+                        <td>30%</td>
+                        <td>Most consumer goods</td>
+                    </tr>
+                    <tr>
+                        <td>China Electronics</td>
+                        <td>30%</td>
+                        <td>Phones, laptops, accessories</td>
+                    </tr>
+                    <tr>
+                        <td>China Textiles</td>
+                        <td>30%</td>
+                        <td>Clothing, fabrics, home textiles</td>
+                    </tr>
+                    <tr>
+                        <td>Postal China (&lt;$800)</td>
+                        <td>54%</td>
+                        <td>Small packages, dropshipping</td>
+                    </tr>
+                    <tr>
+                        <td>Mexico General</td>
+                        <td>25%</td>
+                        <td>Most products</td>
+                    </tr>
+                    <tr>
+                        <td>India Textiles</td>
+                        <td>50%</td>
+                        <td>Clothing, fabrics</td>
+                    </tr>
+                    <tr>
+                        <td>Vietnam General</td>
+                        <td>20%</td>
+                        <td>Most products</td>
+                    </tr>
+                    <tr>
+                        <td>Steel/Aluminum</td>
+                        <td>50%</td>
+                        <td>Metal products, furniture</td>
+                    </tr>
+                    <tr>
+                        <td>Autos/Parts</td>
+                        <td>25%</td>
+                        <td>Car parts, accessories</td>
+                    </tr>
+                    <tr>
+                        <td>Other Countries</td>
+                        <td>10%</td>
+                        <td>General imports</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="text-align: center; margin-top: 30px; color: #6b7280;">
+                ⚠️ Rates are for reference only. Verify with your customs broker. Not legal or financial advice.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Get Your Complete Tariff Audit</h2>
+            <p>Upload up to 50 SKUs and get instant KEEP/KILL/CHANGE PRICE recommendations</p>
+            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Start Your $59 Audit →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TariffSnap. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a> | 
+                <a href="/tariff-calculator/">Calculator</a> | 
+                <a href="/pricing/">Pricing</a> | 
+                <a href="/blog/">Blog</a>
+            </p>
+            <p style="margin-top: 15px;">
+                Questions? <a href="mailto:tariffsnap@gmail.com">tariffsnap@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

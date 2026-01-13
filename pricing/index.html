@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TariffSnap pricing: Get a complete tariff audit for $59 (normally $149). Upload up to 50 SKUs and receive KEEP/KILL/CHANGE PRICE recommendations in 2 minutes. No subscription required.">
+    <title>Pricing — TariffSnap Tariff Audit for E-Commerce ($59)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .pricing-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f9fafb;
+            border: 3px solid #1e3a8a;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .pricing-card .badge {
+            background: #dc2626;
+            color: white;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+
+        .pricing-card .price {
+            font-size: 56px;
+            font-weight: 900;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .original-price {
+            font-size: 24px;
+            text-decoration: line-through;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card .description {
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .pricing-card li {
+            padding: 12px 0;
+            font-size: 18px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+
+        .cta-button {
+            display: block;
+            background: #10b981;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+        .features {
+            background: #f9fafb;
+            padding: 60px 20px;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .feature h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .feature p {
+            color: #6b7280;
+        }
+
+        /* FAQ */
+        .faq {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .faq h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #f9fafb;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .faq-item p {
+            color: #6b7280;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .pricing-card .price {
+                font-size: 42px;
+            }
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">TariffSnap</a>
+            <nav>
+                <a href="/tariff-calculator/">Calculator</a>
+                <a href="/pricing/">Pricing</a>
+                <a href="/blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>One-time fee. No subscription. Instant results.</p>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-card">
+                <span class="badge">LIMITED TIME OFFER</span>
+                <h2>Complete Tariff Audit</h2>
+                <div class="price">$59</div>
+                <div class="original-price">Regular Price: $149</div>
+                <p class="description">One-time payment. Up to 50 SKUs. Results in 2 minutes.</p>
+                
+                <ul>
+                    <li>✅ Upload CSV with up to 50 products</li>
+                    <li>✅ Real landed cost calculations (tariffs + duties + fees)</li>
+                    <li>✅ KEEP / KILL / CHANGE PRICE recommendations</li>
+                    <li>✅ Estimated monthly margin impact per SKU</li>
+                    <li>✅ Identify money-losing products</li>
+                    <li>✅ Email report delivered in 2 minutes</li>
+                    <li>✅ Works with Shopify, Amazon, Etsy, WooCommerce</li>
+                    <li>✅ No subscription or recurring fees</li>
+                </ul>
+
+                <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Your Audit Now →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>What Makes TariffSnap Worth It?</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>💰 Instant ROI</h3>
+                    <p>Find just one SKU to kill or reprice and you've saved hundreds per month. The $59 audit pays for itself immediately.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Fast Results</h3>
+                    <p>No waiting days for a customs broker quote. Get your complete analysis in 2 minutes via email.</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 Actionable Data</h3>
+                    <p>Not just numbers—get clear KEEP/KILL/CHANGE PRICE recommendations for every SKU.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 E-Commerce Focused</h3>
+                    <p>Built specifically for Shopify, Amazon FBA, Etsy, and WooCommerce sellers. Upload your CSV and go.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 One-Time Payment</h3>
+                    <p>No subscriptions, no recurring fees. Pay once, get your audit, make better decisions.</p>
+                </div>
+                <div class="feature">
+                    <h3>📈 Scale Confidently</h3>
+                    <p>Know exactly which products are profitable before you scale. Avoid expensive mistakes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>What's included in the $59 audit?</h3>
+                    <p>You get a complete analysis of up to 50 SKUs including real landed costs (product cost + shipping + tariffs + duties), KEEP/KILL/CHANGE PRICE recommendations, and estimated monthly margin impact. Results delivered via email in 2 minutes.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is this a one-time payment or subscription?</h3>
+                    <p>One-time payment only. No subscriptions, no recurring fees. Pay $59 once and get your complete audit.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if I have more than 50 SKUs?</h3>
+                    <p>The $59 audit covers up to 50 SKUs. For larger catalogs, email us at tariffsnap@gmail.com for custom pricing.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How accurate are the tariff calculations?</h3>
+                    <p>We use current US import tariff rates (updated January 2026) and calculate based on country of origin and product category. However, actual duties may vary—always verify with your customs broker for final confirmation.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What platforms does this work with?</h3>
+                    <p>TariffSnap works with any e-commerce platform: Shopify, Amazon FBA, Etsy, WooCommerce, BigCommerce, Magento, and more. Just export your products to CSV and upload.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How long does it take to get results?</h3>
+                    <p>You'll receive your complete tariff audit via email within 2 minutes of payment.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What if I'm not satisfied?</h3>
+                    <p>If you find the audit didn't provide value, email us at tariffsnap@gmail.com within 7 days for a full refund.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Why is it $59 instead of $149?</h3>
+                    <p>This is a limited-time promotional price to help e-commerce businesses adapt to new tariff rates. Regular price is $149, but we're offering it at $59 for a limited time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 TariffSnap. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a> | 
+                <a href="/tariff-calculator/">Calculator</a> | 
+                <a href="/pricing/">Pricing</a> | 
+                <a href="/blog/">Blog</a>
+            </p>
+            <p style="margin-top: 15px;">
+                Questions? <a href="mailto:tariffsnap@gmail.com">tariffsnap@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
