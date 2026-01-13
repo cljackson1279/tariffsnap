@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="End-of-Year TariffSnap Audit - Now $59 (was $149). Upload your products CSV, get KEEP/KILL/CHANGE PRICE list + estimated monthly margin impact.">
+    <title>TariffSnap - End-of-Year Audit $59 (Was $149)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .price-banner {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero .original-price {
+            font-size: 24px;
+            text-decoration: line-through;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .hero .sale-price {
+            font-size: 56px;
+            font-weight: 900;
+            color: #fef08a;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .sale-label {
+            font-size: 18px;
+            margin-top: 10px;
+            opacity: 0.95;
+        }
+
+        .hero .subheadline {
+            font-size: 24px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .hero .platforms {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* ROI Preview */
+        .roi-section {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .roi-box {
+            background: #f3f4f6;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .roi-box h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+
+        .roi-box h3 {
+            font-size: 24px;
+            margin: 25px 0 15px 0;
+            color: #374151;
+        }
+
+        .roi-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .roi-box li {
+            padding: 10px 0;
+            font-size: 18px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .roi-box li:last-child {
+            border-bottom: none;
+        }
+
+        .highlight {
+            background: #fef3c7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: #f9fafb;
+            padding: 60px 20px;
+        }
+
+        .how-it-works h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background: #7c3aed;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .step p {
+            font-size: 16px;
+            color: #6b7280;
+        }
+
+        /* Tariff Tracker */
+        .tariff-tracker {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .tariff-tracker h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+        }
+
+        .table-container {
+            max-width: 900px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f9fafb;
+        }
+
+        tbody tr:hover {
+            background: #f3f4f6;
+        }
+
+        .impact-critical {
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .impact-moderate {
+            color: #f59e0b;
+            font-weight: 700;
+        }
+
+        .impact-low {
+            color: #10b981;
+            font-weight: 700;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: #f9fafb;
+            padding: 60px 20px;
+        }
+
+        .form-section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+
+        .form-section p {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #6b7280;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .form-link {
+            display: block;
+            text-align: center;
+            background: #7c3aed;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .form-link:hover {
+            background: #6d28d9;
+            transform: translateY(-2px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: white;
+            padding: 60px 20px;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer-cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .sale-price {
+                font-size: 42px;
+            }
+
+            .hero .subheadline {
+                font-size: 18px;
+            }
+
+            .hero .platforms {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+
+            .roi-box {
+                padding: 25px;
+            }
+
+            .roi-box h2 {
+                font-size: 26px;
+            }
+
+            .how-it-works h2,
+            .tariff-tracker h2,
+            .form-section h2,
+            .testimonials h2 {
+                font-size: 28px;
+            }
+
+            .footer-cta h2 {
+                font-size: 28px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 12px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>🔥 End-of-Year TariffSnap Audit 🔥</h1>
+            <div class="price-banner">
+                <p class="original-price">Standard Price: $149</p>
+                <p class="sale-price">NOW $59</p>
+                <p class="sale-label">Limited Time End-of-Year Promo</p>
+            </div>
+            <p class="subheadline">Tariffs into the US are often 40–55%. One bad SKU can quietly wipe out your profit.</p>
+            <p class="platforms"><strong>Get a TariffSnap audit on up to 50 SKUs for just $59</strong></p>
+            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Upload CSV → Start Your $59 Audit</a>
+        </div>
+    </section>
+
+    <!-- ROI Preview -->
+    <section class="roi-section">
+        <div class="container">
+            <div class="roi-box">
+                <h2>💰 What You Get for $59</h2>
+                
+                <h3>Your Complete Audit Includes:</h3>
+                <ul>
+                    <li>✅ Upload a simple CSV of your products (up to 50 SKUs)</li>
+                    <li>✅ We calculate real landed cost (tariffs, duties, fees)</li>
+                    <li>✅ You get a clear list: <strong>KEEP / KILL / CHANGE PRICE</strong></li>
+                    <li>✅ Estimated monthly margin impact</li>
+                </ul>
+
+                <div class="highlight">
+                    Find at least one SKU to kill or reprice, or you've just paid $59 to avoid a four-figure mistake.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Upload</h3>
+                    <p>Upload your products CSV (up to 50 SKUs from Shopify/Amazon/Etsy/WooCommerce)</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Pay</h3>
+                    <p>$59 one-time fee (normally $149, end-of-year promo)</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Results</h3>
+                    <p>Analysis in 2 minutes via email</p>
+                </div>
+            </div>
+
+            <div style="max-width: 700px; margin: 50px auto 0; text-align: center;">
+                <h3 style="font-size: 24px; margin-bottom: 20px;">What You'll Receive:</h3>
+                <ul style="text-align: left; font-size: 18px; line-height: 2;">
+                    <li>✅ List of SKUs to <strong>KILL</strong> (losing money post-tariff)</li>
+                    <li>✅ SKUs to <strong>PRICE UP</strong> (+20% recommended)</li>
+                    <li>✅ SKUs to <strong>KEEP</strong> (still profitable)</li>
+                    <li>✅ Estimated monthly savings</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tariff Tracker -->
+    <section class="tariff-tracker">
+        <div class="container">
+            <h2>2025 Tariff Rates</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Country/Category</th>
+                            <th>Old Rate</th>
+                            <th>New Rate (2025)</th>
+                            <th>Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>China General</td>
+                            <td>25%</td>
+                            <td>30%</td>
+                            <td class="impact-critical">🔴 CRITICAL</td>
+                        </tr>
+                        <tr>
+                            <td>China Electronics</td>
+                            <td>25%</td>
+                            <td>30%</td>
+                            <td class="impact-critical">🔴 SEVERE</td>
+                        </tr>
+                        <tr>
+                            <td>China Textiles</td>
+                            <td>25%</td>
+                            <td>30%</td>
+                            <td class="impact-critical">🔴 HIGH</td>
+                        </tr>
+                        <tr>
+                            <td>Mexico General</td>
+                            <td>0%</td>
+                            <td>25%</td>
+                            <td class="impact-moderate">🟡 MODERATE</td>
+                        </tr>
+                        <tr>
+                            <td>India Textiles</td>
+                            <td>0%</td>
+                            <td>50%</td>
+                            <td class="impact-critical">🔴 HIGH</td>
+                        </tr>
+                        <tr>
+                            <td>Vietnam General</td>
+                            <td>0%</td>
+                            <td>20%</td>
+                            <td class="impact-moderate">🟡 MODERATE</td>
+                        </tr>
+                        <tr>
+                            <td>Steel/Aluminum (All)</td>
+                            <td>10%</td>
+                            <td>50%</td>
+                            <td class="impact-critical">🔴 CRITICAL</td>
+                        </tr>
+                        <tr>
+                            <td>Autos/Parts (All)</td>
+                            <td>2.5%</td>
+                            <td>25%</td>
+                            <td class="impact-moderate">🟡 MODERATE</td>
+                        </tr>
+                        <tr>
+                            <td>Postal China (&lt;$800)</td>
+                            <td>0%</td>
+                            <td>54%</td>
+                            <td class="impact-critical">🔴 EXTREME</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>0%</td>
+                            <td>10%</td>
+                            <td class="impact-low">🟢 LOW</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Store Owners Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Killed 12 SKUs (Shopify) - saved $6k"</p>
+                    <p class="testimonial-author">— Mike S., Shopify Store</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Amazon FBA margins fixed"</p>
+                    <p class="testimonial-author">— Sarah T., FBA Seller</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Etsy wholesale costs clarified"</p>
+                    <p class="testimonial-author">— Raj P., Etsy Shop</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="form">
+        <div class="container">
+            <h2>Get Your End-of-Year Tariff Audit</h2>
+            <p>Upload your CSV and pay $59 (normally $149) to receive your analysis in 2 minutes</p>
+            <div class="roi-calculator" style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px auto; max-width: 700px; border-radius: 8px;">
+                <p style="font-size: 18px; font-weight: 700; color: #92400e; margin: 0; text-align: center;">
+                    📊 <strong>One bad SKU at 55% tariff can cost you $500+/month. This $59 audit pays for itself instantly.</strong>
+                </p>
+            </div>
+            <div class="form-container">
+                <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="form-link">
+                    Start Your $59 Audit →
+                </a>
+                <p style="margin-top: 20px; text-align: center; color: #6b7280;">
+                    Upload your CSV first → Pay $59 (was $149) → Get full report in 2 minutes
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+        <div class="container">
+            <h2>⚡ End-of-Year Sale: $59 (Was $149)</h2>
+            <p>Limited time offer - Upload your CSV now and save $90</p>
+            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Start Your $59 Audit Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="font-weight: 700; font-size: 16px; color: #dc2626; margin-bottom: 15px;">
+                ⚠️ China 30-54% | Mexico 25% | India 50% | Rates as of Dec 2025
+            </p>
+            <p style="font-size: 14px; color: #6b7280; margin-bottom: 20px;">
+                Verify with broker. Not legal advice.
+            </p>
+            <p>&copy; 2025 TariffSnap. All rights reserved.</p>
+            <p style="margin-top: 10px;">Works with Shopify, Amazon FBA, Etsy, WooCommerce, and ANY e-commerce platform</p>
+            <p style="margin-top: 15px; font-size: 14px;">Questions? Email us at <a href="mailto:tariffsnap@gmail.com" style="color: #10b981; text-decoration: none; font-weight: 600;">tariffsnap@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
