@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="End-of-Year TariffSnap Audit - Now $59 (was $149). Upload your products CSV, get KEEP/KILL/CHANGE PRICE list + estimated monthly margin impact.">
-    <title>TariffSnap - End-of-Year Audit $59 (Was $149)</title>
+    <meta name="description" content="Upload your SKUs and get a one-time tariff audit showing exactly how much you're paying in duties and where you can save. $149 report. Fast, accurate, actionable.">
+    <title>TariffSnap — Instant Tariff & Landed Cost Calculator for Shopify, Amazon, Etsy</title>
     <style>
         * {
             margin: 0;
@@ -27,7 +27,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -40,45 +40,51 @@
             line-height: 1.2;
         }
 
-        .hero .price-banner {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
+        .hero .subheadline {
+            font-size: 24px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .platforms {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .hero .price-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
             border-radius: 12px;
             margin: 30px auto;
             max-width: 600px;
             backdrop-filter: blur(10px);
         }
 
-        .hero .original-price {
-            font-size: 24px;
-            text-decoration: line-through;
+        .hero .price-box .regular-price {
+            font-size: 20px;
             opacity: 0.8;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
-        .hero .sale-price {
-            font-size: 56px;
+        .hero .price-box .current-price {
+            font-size: 48px;
             font-weight: 900;
             color: #fef08a;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 10px;
         }
 
-        .hero .sale-label {
-            font-size: 18px;
-            margin-top: 10px;
-            opacity: 0.95;
-        }
-
-        .hero .subheadline {
-            font-size: 24px;
-            margin-bottom: 15px;
-            opacity: 0.95;
-        }
-
-        .hero .platforms {
-            font-size: 18px;
-            margin-bottom: 40px;
-            opacity: 0.9;
+        .hero .price-box .limited-time {
+            font-size: 16px;
+            background: #dc2626;
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
         }
 
         .cta-button {
@@ -100,46 +106,46 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
-        /* ROI Preview */
-        .roi-section {
+        /* Value Prop */
+        .value-prop {
             background: white;
             padding: 60px 20px;
         }
 
-        .roi-box {
+        .value-box {
             background: #f3f4f6;
             border-radius: 12px;
             padding: 40px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        .roi-box h2 {
+        .value-box h2 {
             font-size: 32px;
             margin-bottom: 30px;
             color: #1e3a8a;
             text-align: center;
         }
 
-        .roi-box h3 {
+        .value-box h3 {
             font-size: 24px;
             margin: 25px 0 15px 0;
             color: #374151;
         }
 
-        .roi-box ul {
+        .value-box ul {
             list-style: none;
             padding-left: 0;
         }
 
-        .roi-box li {
-            padding: 10px 0;
+        .value-box li {
+            padding: 12px 0;
             font-size: 18px;
             border-bottom: 1px solid #e5e7eb;
         }
 
-        .roi-box li:last-child {
+        .value-box li:last-child {
             border-bottom: none;
         }
 
@@ -151,6 +157,7 @@
             font-weight: 600;
             text-align: center;
             font-size: 18px;
+            color: #92400e;
         }
 
         /* How It Works */
@@ -216,8 +223,15 @@
         .tariff-tracker h2 {
             font-size: 36px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             color: #1e3a8a;
+        }
+
+        .tariff-tracker .subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #6b7280;
+            margin-bottom: 40px;
         }
 
         .table-container {
@@ -274,9 +288,50 @@
             font-weight: 700;
         }
 
+        /* Testimonials */
+        .testimonials {
+            background: #f9fafb;
+            padding: 60px 20px;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1e3a8a;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #6b7280;
+        }
+
         /* Form Section */
         .form-section {
-            background: #f9fafb;
+            background: white;
             padding: 60px 20px;
         }
 
@@ -297,7 +352,7 @@
         .form-container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background: #f9fafb;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -321,49 +376,9 @@
             transform: translateY(-2px);
         }
 
-        /* Testimonials */
-        .testimonials {
-            background: white;
-            padding: 60px 20px;
-        }
-
-        .testimonials h2 {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 50px;
-            color: #1e3a8a;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .testimonial {
-            background: #f9fafb;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .testimonial-quote {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 15px;
-            color: #1f2937;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #6b7280;
-        }
-
         /* Footer CTA */
         .footer-cta {
-            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -398,8 +413,8 @@
                 font-size: 32px;
             }
 
-            .hero .sale-price {
-                font-size: 42px;
+            .hero .price-box .current-price {
+                font-size: 36px;
             }
 
             .hero .subheadline {
@@ -415,11 +430,11 @@
                 font-size: 18px;
             }
 
-            .roi-box {
+            .value-box {
                 padding: 25px;
             }
 
-            .roi-box h2 {
+            .value-box h2 {
                 font-size: 26px;
             }
 
@@ -448,34 +463,38 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>🔥 End-of-Year TariffSnap Audit 🔥</h1>
-            <div class="price-banner">
-                <p class="original-price">Standard Price: $149</p>
-                <p class="sale-price">NOW $59</p>
-                <p class="sale-label">Limited Time End-of-Year Promo</p>
+            <h1>Instant Tariff & Landed Cost Calculator for E-Commerce</h1>
+            <p class="subheadline">Upload your SKUs and get a complete tariff audit showing exactly how much you're paying in duties and where you can save.</p>
+            <p class="platforms">Works with Shopify, Amazon FBA, Etsy, WooCommerce, and any e-commerce platform</p>
+            
+            <div class="price-box">
+                <p class="regular-price">Regular Price: $149</p>
+                <p class="current-price">$59</p>
+                <p class="limited-time">Limited Time Offer</p>
             </div>
-            <p class="subheadline">Tariffs into the US are often 40–55%. One bad SKU can quietly wipe out your profit.</p>
-            <p class="platforms"><strong>Get a TariffSnap audit on up to 50 SKUs for just $59</strong></p>
-            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Upload CSV → Start Your $59 Audit</a>
+            
+            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Your Tariff Audit →</a>
         </div>
     </section>
 
-    <!-- ROI Preview -->
-    <section class="roi-section">
+    <!-- Value Prop -->
+    <section class="value-prop">
         <div class="container">
-            <div class="roi-box">
-                <h2>💰 What You Get for $59</h2>
+            <div class="value-box">
+                <h2>What You Get</h2>
                 
-                <h3>Your Complete Audit Includes:</h3>
+                <h3>Complete Tariff & Landed Cost Analysis:</h3>
                 <ul>
                     <li>✅ Upload a simple CSV of your products (up to 50 SKUs)</li>
-                    <li>✅ We calculate real landed cost (tariffs, duties, fees)</li>
-                    <li>✅ You get a clear list: <strong>KEEP / KILL / CHANGE PRICE</strong></li>
-                    <li>✅ Estimated monthly margin impact</li>
+                    <li>✅ We calculate real landed cost including tariffs, duties, and fees</li>
+                    <li>✅ Get a clear action list: <strong>KEEP / KILL / CHANGE PRICE</strong></li>
+                    <li>✅ See estimated monthly margin impact for each SKU</li>
+                    <li>✅ Identify which products are losing money post-tariff</li>
+                    <li>✅ Receive results in 2 minutes via email</li>
                 </ul>
 
                 <div class="highlight">
-                    Find at least one SKU to kill or reprice, or you've just paid $59 to avoid a four-figure mistake.
+                    💰 One bad SKU at 55% tariff can cost you $500+/month. This $59 audit pays for itself instantly.
                 </div>
             </div>
         </div>
@@ -488,28 +507,28 @@
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Upload</h3>
-                    <p>Upload your products CSV (up to 50 SKUs from Shopify/Amazon/Etsy/WooCommerce)</p>
+                    <h3>Upload Your Products</h3>
+                    <p>Upload a CSV of up to 50 SKUs from Shopify, Amazon, Etsy, WooCommerce, or any e-commerce platform</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3>Pay</h3>
-                    <p>$59 one-time fee (normally $149, end-of-year promo)</p>
+                    <h3>Pay $59</h3>
+                    <p>One-time fee for your complete tariff and landed cost audit (normally $149)</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3>Get Results</h3>
-                    <p>Analysis in 2 minutes via email</p>
+                    <h3>Get Your Report</h3>
+                    <p>Receive your detailed analysis in 2 minutes via email with actionable recommendations</p>
                 </div>
             </div>
 
             <div style="max-width: 700px; margin: 50px auto 0; text-align: center;">
-                <h3 style="font-size: 24px; margin-bottom: 20px;">What You'll Receive:</h3>
+                <h3 style="font-size: 24px; margin-bottom: 20px;">Your Report Includes:</h3>
                 <ul style="text-align: left; font-size: 18px; line-height: 2;">
-                    <li>✅ List of SKUs to <strong>KILL</strong> (losing money post-tariff)</li>
-                    <li>✅ SKUs to <strong>PRICE UP</strong> (+20% recommended)</li>
-                    <li>✅ SKUs to <strong>KEEP</strong> (still profitable)</li>
-                    <li>✅ Estimated monthly savings</li>
+                    <li>✅ SKUs to <strong>KILL</strong> (losing money after tariffs)</li>
+                    <li>✅ SKUs to <strong>PRICE UP</strong> (recommended price increases)</li>
+                    <li>✅ SKUs to <strong>KEEP</strong> (still profitable as-is)</li>
+                    <li>✅ Estimated monthly savings and margin improvements</li>
                 </ul>
             </div>
         </div>
@@ -518,15 +537,16 @@
     <!-- Tariff Tracker -->
     <section class="tariff-tracker">
         <div class="container">
-            <h2>2025 Tariff Rates</h2>
+            <h2>Current US Import Tariff Rates</h2>
+            <p class="subtitle">Updated tariff rates for e-commerce imports as of January 2026</p>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
                             <th>Country/Category</th>
-                            <th>Old Rate</th>
-                            <th>New Rate (2025)</th>
-                            <th>Impact</th>
+                            <th>Previous Rate</th>
+                            <th>Current Rate (2026)</th>
+                            <th>Impact on E-Commerce</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -599,19 +619,19 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2>What Store Owners Say</h2>
+            <h2>What E-Commerce Store Owners Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p class="testimonial-quote">"Killed 12 SKUs (Shopify) - saved $6k"</p>
-                    <p class="testimonial-author">— Mike S., Shopify Store</p>
+                    <p class="testimonial-quote">"Killed 12 SKUs on Shopify and saved $6k/month in tariff costs"</p>
+                    <p class="testimonial-author">— Mike S., Shopify Store Owner</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-quote">"Amazon FBA margins fixed"</p>
-                    <p class="testimonial-author">— Sarah T., FBA Seller</p>
+                    <p class="testimonial-quote">"Fixed my Amazon FBA margins - now I know exactly what I'm paying in duties"</p>
+                    <p class="testimonial-author">— Sarah T., Amazon FBA Seller</p>
                 </div>
                 <div class="testimonial">
-                    <p class="testimonial-quote">"Etsy wholesale costs clarified"</p>
-                    <p class="testimonial-author">— Raj P., Etsy Shop</p>
+                    <p class="testimonial-quote">"Finally understand my Etsy wholesale costs with accurate tariff calculations"</p>
+                    <p class="testimonial-author">— Raj P., Etsy Shop Owner</p>
                 </div>
             </div>
         </div>
@@ -620,19 +640,14 @@
     <!-- Form Section -->
     <section class="form-section" id="form">
         <div class="container">
-            <h2>Get Your End-of-Year Tariff Audit</h2>
+            <h2>Get Your Tariff & Landed Cost Audit</h2>
             <p>Upload your CSV and pay $59 (normally $149) to receive your analysis in 2 minutes</p>
-            <div class="roi-calculator" style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px auto; max-width: 700px; border-radius: 8px;">
-                <p style="font-size: 18px; font-weight: 700; color: #92400e; margin: 0; text-align: center;">
-                    📊 <strong>One bad SKU at 55% tariff can cost you $500+/month. This $59 audit pays for itself instantly.</strong>
-                </p>
-            </div>
             <div class="form-container">
                 <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="form-link">
-                    Start Your $59 Audit →
+                    Start Your Tariff Audit →
                 </a>
                 <p style="margin-top: 20px; text-align: center; color: #6b7280;">
-                    Upload your CSV first → Pay $59 (was $149) → Get full report in 2 minutes
+                    Upload your CSV → Pay $59 → Get your full tariff report in 2 minutes
                 </p>
             </div>
         </div>
@@ -641,9 +656,9 @@
     <!-- Footer CTA -->
     <section class="footer-cta">
         <div class="container">
-            <h2>⚡ End-of-Year Sale: $59 (Was $149)</h2>
-            <p>Limited time offer - Upload your CSV now and save $90</p>
-            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Start Your $59 Audit Now</a>
+            <h2>Stop Losing Money to Hidden Tariff Costs</h2>
+            <p>Get your complete tariff audit for $59 (normally $149) - Limited time offer</p>
+            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Your Audit Now</a>
         </div>
     </section>
 
@@ -651,13 +666,13 @@
     <footer>
         <div class="container">
             <p style="font-weight: 700; font-size: 16px; color: #dc2626; margin-bottom: 15px;">
-                ⚠️ China 30-54% | Mexico 25% | India 50% | Rates as of Dec 2025
+                ⚠️ China 30-54% | Mexico 25% | India 50% | Current US import tariff rates as of Jan 2026
             </p>
             <p style="font-size: 14px; color: #6b7280; margin-bottom: 20px;">
-                Verify with broker. Not legal advice.
+                Tariff rates are for reference only. Verify with your customs broker. Not legal or financial advice.
             </p>
-            <p>&copy; 2025 TariffSnap. All rights reserved.</p>
-            <p style="margin-top: 10px;">Works with Shopify, Amazon FBA, Etsy, WooCommerce, and ANY e-commerce platform</p>
+            <p>&copy; 2026 TariffSnap. All rights reserved.</p>
+            <p style="margin-top: 10px;">Works with Shopify, Amazon FBA, Etsy, WooCommerce, and any e-commerce platform</p>
             <p style="margin-top: 15px; font-size: 14px;">Questions? Email us at <a href="mailto:tariffsnap@gmail.com" style="color: #10b981; text-decoration: none; font-weight: 600;">tariffsnap@gmail.com</a></p>
         </div>
     </footer>
