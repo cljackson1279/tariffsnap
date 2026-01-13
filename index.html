@@ -25,6 +25,38 @@
             padding: 0 20px;
         }
 
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 30px;
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1e3a8a;
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
@@ -460,6 +492,18 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">TariffSnap</a>
+            <nav>
+                <a href="/tariff-calculator/">Calculator</a>
+                <a href="/pricing/">Pricing</a>
+                <a href="/blog/">Blog</a>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
