@@ -1,0 +1,120 @@
+{
+  "lastUpdated": "2026-02-03",
+  "source": "Penn Wharton Budget Model / USITC DataWeb",
+  "averageEffectiveTariffRate": 10.5,
+  "countryRates": {
+    "CN": {
+      "name": "China",
+      "effectiveRate": 34.7,
+      "categories": {
+        "general": 34.7,
+        "electronics": 34.7,
+        "textiles": 34.7,
+        "postal_under_800": 54.0
+      }
+    },
+    "MX": {
+      "name": "Mexico",
+      "effectiveRate": 25.0,
+      "usmcaExemption": true,
+      "categories": {
+        "general": 25.0,
+        "automotive": 25.0
+      }
+    },
+    "CA": {
+      "name": "Canada",
+      "effectiveRate": 0.1,
+      "usmcaExemption": true,
+      "categories": {
+        "general": 0.1
+      }
+    },
+    "VN": {
+      "name": "Vietnam",
+      "effectiveRate": 20.0,
+      "categories": {
+        "general": 20.0,
+        "textiles": 20.0
+      }
+    },
+    "IN": {
+      "name": "India",
+      "effectiveRate": 50.0,
+      "categories": {
+        "textiles": 50.0,
+        "general": 25.0
+      }
+    },
+    "DE": {
+      "name": "Germany",
+      "effectiveRate": 1.38,
+      "categories": {
+        "general": 1.38
+      }
+    },
+    "JP": {
+      "name": "Japan",
+      "effectiveRate": 1.5,
+      "categories": {
+        "general": 1.5
+      }
+    },
+    "IE": {
+      "name": "Ireland",
+      "effectiveRate": 2.0,
+      "categories": {
+        "general": 2.0
+      }
+    },
+    "CH": {
+      "name": "Switzerland",
+      "effectiveRate": 2.0,
+      "categories": {
+        "general": 2.0
+      }
+    }
+  },
+  "productCategories": {
+    "steel_aluminum": {
+      "name": "Steel & Aluminum",
+      "rate": 39.8,
+      "note": "Section 232 tariffs plus June 4 increase from 25% to 50%"
+    },
+    "automotive": {
+      "name": "Automotive Vehicles & Parts",
+      "rate": 15.3
+    },
+    "semiconductors": {
+      "name": "Advanced Computing Chips",
+      "rate": 25.0,
+      "effectiveDate": "2026-01-15"
+    },
+    "furniture": {
+      "name": "Upholstered Furniture/Kitchen Cabinets",
+      "rate": 15.0,
+      "effectiveDate": "2026-01-01"
+    }
+  },
+  "additionalFees": {
+    "mpf": {
+      "name": "Merchandise Processing Fee",
+      "rate": 0.3464,
+      "min": 27.98,
+      "max": 538.40,
+      "note": "Percentage of customs value"
+    },
+    "hmf": {
+      "name": "Harbor Maintenance Fee",
+      "rate": 0.125,
+      "note": "Percentage of customs value for ocean shipments"
+    }
+  },
+  "notes": [
+    "Rates as of November 2025 (latest USITC data)",
+    "China effective rate: 34.7% (up from 2.3% in January 2025)",
+    "Mexico/Canada: USMCA exemptions apply to 89% of imports",
+    "India textiles: 50% rate effective 2026",
+    "Postal shipments from China under $800: 54% rate"
+  ]
+}
