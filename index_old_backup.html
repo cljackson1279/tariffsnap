@@ -12,9 +12,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <meta name="description" content="Tariff calculator and import duty calculator for e-commerce. Calculate landed costs for Shopify, Amazon FBA, and Etsy. Get your complete SKU tariff audit for $59. Fast, accurate, actionable.">
+    <meta name="description" content="Free tariff calculator for e-commerce. Calculate import duties and landed costs instantly for Shopify, Amazon FBA, and Etsy. Updated February 2026 tariff rates for China, Mexico, India, Vietnam.">
     <meta name="keywords" content="tariff calculator, import duty calculator, landed cost calculator, HTS code lookup, China tariff rates, Mexico tariff calculator, Shopify import duties, Amazon FBA tariffs, Etsy import costs">
-    <title>Tariff Calculator & Import Duty Calculator for E-Commerce | TariffSnap</title>
+    <title>Free Tariff Calculator & Import Duty Calculator for E-Commerce | TariffSnap</title>
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -23,14 +23,12 @@
       "@type": "SoftwareApplication",
       "name": "TariffSnap",
       "url": "https://tariffsnap.com",
-      "description": "Instant tariff calculator and import duty calculator for e-commerce sellers. Calculate landed costs for products from China, Mexico, Vietnam, and other countries. Get SKU-level tariff audits for Shopify, Amazon FBA, and Etsy stores.",
+      "description": "Free tariff calculator and import duty calculator for e-commerce sellers. Calculate landed costs for products from China, Mexico, Vietnam, and other countries. Get SKU-level tariff audits for Shopify, Amazon FBA, and Etsy stores.",
       "applicationCategory": "BusinessApplication",
       "offers": {
         "@type": "Offer",
-        "price": "59",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock"
+        "price": "0",
+        "priceCurrency": "USD"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -51,7 +49,7 @@
           "name": "What is a tariff calculator?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A tariff calculator is a tool that helps e-commerce sellers calculate import duties and taxes on products imported from other countries. It uses your product cost, country of origin, and HTS code to determine the exact tariff rate and landed cost."
+            "text": "A tariff calculator is a tool that helps e-commerce sellers calculate import duties and taxes on products imported from other countries. It uses your product cost, country of origin, and product category to determine the exact tariff rate and landed cost."
           }
         },
         {
@@ -59,7 +57,7 @@
           "name": "How do I calculate landed cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "To calculate landed cost, add your product cost + shipping cost + (product cost × tariff rate) + any additional fees. For example, a $10 product from China with 30% tariff and $2 shipping = $10 + $2 + ($10 × 0.30) = $15 landed cost."
+            "text": "To calculate landed cost, add your product cost + shipping cost + (product cost × tariff rate) + any additional fees. For example, a $10 product from China with 34.7% tariff and $2 shipping = $10 + $2 + ($10 × 0.347) = $15.47 landed cost."
           }
         },
         {
@@ -67,7 +65,7 @@
           "name": "What are the current tariff rates for China?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As of January 2026, China tariff rates are: General products 30%, Electronics 30%, Textiles 30%, and Postal shipments under $800 are 54%. These rates apply to most e-commerce imports from China to the United States."
+            "text": "As of February 2026, China effective tariff rate is 34.7% for most products. This is up from 2.3% in January 2025. Postal shipments under $800 face a 54% tariff rate. These rates apply to most e-commerce imports from China to the United States."
           }
         },
         {
@@ -75,7 +73,7 @@
           "name": "Does TariffSnap work with Shopify, Amazon FBA, and Etsy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, TariffSnap works with all e-commerce platforms including Shopify, Amazon FBA, Etsy, WooCommerce, and any platform that can export product data to CSV format. Simply upload your SKU list and get instant tariff calculations."
+            "text": "Yes, TariffSnap works with all e-commerce platforms including Shopify, Amazon FBA, Etsy, WooCommerce, and any platform that can export product data to CSV format. Use our free calculator for quick estimates, or upload your SKU list for a complete audit."
           }
         }
       ]
@@ -134,12 +132,11 @@
             color: #1e3a8a;
         }
 
-        /* Hero Section */
+        /* Hero Section with Calculator */
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 80px 20px;
-            text-align: center;
+            padding: 60px 20px 80px 20px;
         }
 
         .hero h1 {
@@ -147,72 +144,168 @@
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
+            text-align: center;
         }
 
         .hero .subheadline {
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 22px;
+            margin-bottom: 40px;
             opacity: 0.95;
-            max-width: 900px;
+            max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
         }
 
-        .hero .platforms {
-            font-size: 18px;
+        /* Free Calculator */
+        .calculator-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            color: #1f2937;
+        }
+
+        .calculator-box h2 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .calculator-box .subtitle {
+            text-align: center;
+            color: #6b7280;
             margin-bottom: 30px;
-            opacity: 0.9;
+            font-size: 16px;
         }
 
-        .hero .price-box {
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            padding: 30px;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            backdrop-filter: blur(10px);
+        .calc-form {
+            display: grid;
+            gap: 20px;
         }
 
-        .hero .regular-price {
-            font-size: 18px;
-            text-decoration: line-through;
-            opacity: 0.8;
-            margin-bottom: 10px;
+        .form-group {
+            display: flex;
+            flex-direction: column;
         }
 
-        .hero .current-price {
-            font-size: 64px;
-            font-weight: 800;
-            color: #fbbf24;
-            margin-bottom: 10px;
-        }
-
-        .hero .limited-badge {
-            display: inline-block;
-            background: #ef4444;
-            padding: 8px 16px;
-            border-radius: 20px;
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
             font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .calc-button {
+            background: #10b981;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .calc-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .calc-results {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f0fdf4;
+            border-radius: 12px;
+            border: 2px solid #10b981;
+            display: none;
+        }
+
+        .calc-results.show {
+            display: block;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #d1fae5;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a8a;
+            padding-top: 20px;
+            margin-top: 10px;
+            border-top: 2px solid #10b981;
+        }
+
+        .result-label {
+            color: #374151;
             font-weight: 600;
         }
 
-        .cta-button {
+        .result-value {
+            color: #1e3a8a;
+            font-weight: 700;
+        }
+
+        .upgrade-cta {
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+        }
+
+        .upgrade-cta h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .upgrade-cta p {
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .upgrade-cta a {
             display: inline-block;
             background: #10b981;
             color: white;
-            padding: 18px 40px;
+            padding: 12px 30px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 18px;
             transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .cta-button:hover {
+        .upgrade-cta a:hover {
             background: #059669;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
 
         /* Content Sections */
@@ -246,7 +339,7 @@
             margin-bottom: 20px;
         }
 
-        /* What You Get */
+        /* Features */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -285,40 +378,6 @@
             left: 0;
         }
 
-        /* How It Works */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .step {
-            text-align: center;
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: #1e3a8a;
-            color: white;
-            border-radius: 50%;
-            font-size: 28px;
-            font-weight: 800;
-            line-height: 60px;
-            margin-bottom: 20px;
-        }
-
-        .step h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .step p {
-            font-size: 16px;
-        }
-
         /* Tariff Rates Table */
         table {
             width: 100%;
@@ -333,20 +392,19 @@
         th, td {
             padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #e5e7eb;
         }
 
         th {
             background: #1e3a8a;
             color: white;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        tr:last-child td {
-            border-bottom: none;
+        tr:nth-child(even) {
+            background: #f9fafb;
         }
 
-        /* FAQ Section */
+        /* FAQ */
         .faq {
             max-width: 800px;
             margin: 0 auto;
@@ -356,7 +414,7 @@
             background: white;
             padding: 25px;
             margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
@@ -369,37 +427,8 @@
 
         .faq-answer {
             font-size: 16px;
-            color: #4b5563;
             line-height: 1.8;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .testimonial-text {
-            font-size: 18px;
-            font-style: italic;
-            color: #1f2937;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-size: 16px;
-            font-weight: 600;
-            color: #6b7280;
+            color: #4b5563;
         }
 
         /* Footer */
@@ -413,28 +442,18 @@
         footer a {
             color: #10b981;
             text-decoration: none;
+            margin: 0 15px;
         }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 32px;
             }
-
-            .hero .subheadline {
-                font-size: 18px;
+            nav {
+                display: none;
             }
-
-            .hero .current-price {
-                font-size: 48px;
-            }
-
-            .section h2 {
-                font-size: 28px;
+            .calculator-box {
+                padding: 25px;
             }
         }
     </style>
@@ -452,160 +471,173 @@
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero with Free Calculator -->
     <section class="hero">
         <div class="container">
-            <h1>Tariff Calculator & Import Duty Calculator for E-Commerce</h1>
-            <p class="subheadline">Calculate landed costs for your Shopify, Amazon FBA, or Etsy store. Get a complete SKU-level tariff audit and see your true product costs after import duties.</p>
-            <p class="platforms">Works with Shopify, Amazon FBA, Etsy, WooCommerce, and any e-commerce platform</p>
+            <h1>Free Tariff Calculator for E-Commerce</h1>
+            <p class="subheadline">Calculate import duties and landed costs instantly. Updated February 2026 rates for China, Mexico, India, Vietnam, and more.</p>
             
-            <div class="price-box">
-                <div class="regular-price">Regular Price: $149</div>
-                <div class="current-price">$59</div>
-                <div class="limited-badge">Limited Time Offer</div>
+            <div class="calculator-box">
+                <h2>🧮 Calculate Your Tariff Now</h2>
+                <p class="subtitle">Free • No signup required • Instant results</p>
+                
+                <form class="calc-form" id="tariffCalc">
+                    <div class="form-group">
+                        <label for="productValue">Product Value (USD)</label>
+                        <input type="number" id="productValue" placeholder="e.g., 10.00" step="0.01" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Country of Origin</label>
+                        <select id="country" required>
+                            <option value="">Select country...</option>
+                            <option value="CN">China</option>
+                            <option value="MX">Mexico</option>
+                            <option value="IN">India</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="CA">Canada</option>
+                            <option value="DE">Germany</option>
+                            <option value="JP">Japan</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Product Category</label>
+                        <select id="category" required>
+                            <option value="">Select category...</option>
+                            <option value="general">General Products</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="textiles">Textiles & Apparel</option>
+                            <option value="steel_aluminum">Steel & Aluminum</option>
+                            <option value="automotive">Automotive Parts</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="shipping">Shipping Cost (USD)</label>
+                        <input type="number" id="shipping" placeholder="e.g., 2.00" step="0.01" value="0">
+                    </div>
+                    
+                    <button type="submit" class="calc-button">Calculate Landed Cost →</button>
+                </form>
+                
+                <div class="calc-results" id="results">
+                    <div class="result-row">
+                        <span class="result-label">Product Value:</span>
+                        <span class="result-value" id="resProductValue">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Tariff Rate:</span>
+                        <span class="result-value" id="resTariffRate">0%</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Tariff Amount:</span>
+                        <span class="result-value" id="resTariffAmount">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Shipping Cost:</span>
+                        <span class="result-value" id="resShipping">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Landed Cost:</span>
+                        <span class="result-value" id="resLandedCost">$0.00</span>
+                    </div>
+                    
+                    <div class="upgrade-cta">
+                        <h3>📊 Need to analyze 50 SKUs at once?</h3>
+                        <p>Get a complete tariff audit with KEEP/KILL/CHANGE PRICE recommendations for your entire product catalog.</p>
+                        <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank">Get Your $59 Audit Report →</a>
+                    </div>
+                </div>
             </div>
-            
-            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Your Tariff Audit →</a>
         </div>
     </section>
 
-    <!-- What is TariffSnap -->
+    <!-- What You Get Section -->
     <section class="section">
         <div class="container">
-            <h2>What is TariffSnap?</h2>
-            <p>TariffSnap is a tariff calculator and import duty calculator designed specifically for e-commerce sellers. If you sell products on Shopify, Amazon FBA, Etsy, or any other platform and import goods from China, Mexico, Vietnam, or other countries, you need to know your true landed cost.</p>
-            
-            <p>A <strong>landed cost</strong> is the total cost of a product after it arrives at your warehouse, including the product cost, shipping, import duties (tariffs), customs fees, and any other charges. Many e-commerce sellers lose money because they don't calculate their landed costs correctly and set prices too low.</p>
-            
-            <p>TariffSnap solves this problem by analyzing your entire product catalog (up to 50 SKUs) and calculating the exact tariff rate, landed cost, and profit margin for each product. You'll get a clear KEEP/KILL/CHANGE PRICE recommendation for every SKU, so you can make smarter sourcing and pricing decisions.</p>
-        </div>
-    </section>
-
-    <!-- What You Get -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2>What You Get with Your $59 Tariff Audit</h2>
+            <h2>Why E-Commerce Sellers Use TariffSnap</h2>
             
             <div class="features">
                 <div class="feature">
-                    <h3>Complete Tariff & Landed Cost Analysis</h3>
+                    <h3>✅ Free Calculator</h3>
                     <ul>
-                        <li>Upload a CSV of up to 50 SKUs from any e-commerce platform</li>
-                        <li>We calculate real landed cost including tariffs, duties, and fees</li>
-                        <li>Get a clear action list: <strong>KEEP / KILL / CHANGE PRICE</strong></li>
-                        <li>See estimated monthly margin impact for each SKU</li>
-                        <li>Identify which products are losing money post-tariff</li>
-                        <li>Receive results in 2 minutes via email</li>
+                        <li>Calculate 1-3 products for free</li>
+                        <li>Updated February 2026 tariff rates</li>
+                        <li>Instant landed cost calculations</li>
+                        <li>No signup or credit card required</li>
                     </ul>
                 </div>
 
                 <div class="feature">
-                    <h3>SKU-Level Recommendations</h3>
+                    <h3>📊 $59 Full Audit (Optional)</h3>
                     <ul>
-                        <li>SKUs to <strong>KILL</strong> (losing money after tariffs)</li>
-                        <li>SKUs to <strong>PRICE UP</strong> (recommended price increases)</li>
-                        <li>SKUs to <strong>KEEP</strong> (still profitable as-is)</li>
-                        <li>Alternative sourcing countries to consider</li>
-                        <li>Estimated monthly savings and margin improvements</li>
-                        <li>HTS code lookup for accurate tariff rates</li>
+                        <li>Analyze up to 50 SKUs via CSV upload</li>
+                        <li>KEEP/KILL/CHANGE PRICE recommendations</li>
+                        <li>Estimated monthly savings report</li>
+                        <li>Alternative sourcing suggestions</li>
                     </ul>
                 </div>
 
                 <div class="feature">
-                    <h3>Why It Matters</h3>
+                    <h3>🎯 Made for E-Commerce</h3>
                     <ul>
-                        <li>One bad SKU at 55% tariff can cost you $500+/month</li>
-                        <li>This $59 audit pays for itself instantly</li>
-                        <li>Stop losing money to hidden import fees</li>
-                        <li>Make data-driven sourcing decisions</li>
-                        <li>Maximize profit margins on every product</li>
-                        <li>Scale your e-commerce business confidently</li>
+                        <li>Works with Shopify, Amazon FBA, Etsy</li>
+                        <li>Profit margin impact analysis</li>
+                        <li>Identifies money-losing SKUs</li>
+                        <li>2-minute results via email</li>
                     </ul>
                 </div>
             </div>
-
-            <div style="text-align: center;">
-                <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Start Your Tariff Audit →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="section">
-        <div class="container">
-            <h2>How the Tariff Calculator Works</h2>
-            
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Upload Your Products</h3>
-                    <p>Upload a CSV of up to 50 SKUs from Shopify, Amazon, Etsy, WooCommerce, or any e-commerce platform. Include product cost, country of origin, and product category.</p>
-                </div>
-
-                <div class="step">
-                    <h3>We Calculate Your Landed Costs</h3>
-                    <p>Our tariff calculator uses the latest 2026 tariff rates to calculate your exact import duties, landed costs, and profit margins for each SKU.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Get Your Report in 2 Minutes</h3>
-                    <p>Receive your detailed analysis via email with actionable KEEP/KILL/CHANGE PRICE recommendations and estimated monthly savings.</p>
-                </div>
-            </div>
-
-            <h3 style="text-align: center; margin-bottom: 20px;">How to Calculate Landed Cost Manually</h3>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">If you want to calculate landed cost yourself, use this formula: <strong>Landed Cost = Product Cost + Shipping + (Product Cost × Tariff Rate)</strong></p>
-            
-            <p style="text-align: center; max-width: 800px; margin: 0 auto;"><strong>Example:</strong> A $10 product from China with 30% tariff and $2 shipping = $10 + $2 + ($10 × 0.30) = <strong>$15 landed cost</strong>. If you sell it for $20, your profit margin is only 25% before other expenses.</p>
         </div>
     </section>
 
     <!-- Tariff Rates -->
     <section class="section section-alt">
         <div class="container">
-            <h2>Current US Import Tariff Rates (2026)</h2>
-            <p style="text-align: center; margin-bottom: 40px;">Updated tariff rates for e-commerce imports as of January 2026. Use these rates to calculate your landed costs.</p>
+            <h2>Current US Import Tariff Rates (February 2026)</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Updated tariff rates as of February 3, 2026. Source: Penn Wharton Budget Model / USITC DataWeb.</p>
             
             <table>
                 <thead>
                     <tr>
                         <th>Country/Category</th>
-                        <th>Previous Rate</th>
-                        <th>Current Rate (2026)</th>
-                        <th>Impact on E-Commerce</th>
+                        <th>Previous Rate (Jan 2025)</th>
+                        <th>Current Rate (Feb 2026)</th>
+                        <th>Impact</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>China General</td>
-                        <td>25%</td>
-                        <td><strong>30%</strong></td>
+                        <td>2.3%</td>
+                        <td><strong>34.7%</strong></td>
                         <td>🔴 CRITICAL</td>
                     </tr>
                     <tr>
                         <td>China Electronics</td>
-                        <td>25%</td>
-                        <td><strong>30%</strong></td>
+                        <td>2.3%</td>
+                        <td><strong>34.7%</strong></td>
                         <td>🔴 SEVERE</td>
                     </tr>
                     <tr>
                         <td>China Textiles</td>
-                        <td>25%</td>
-                        <td><strong>30%</strong></td>
+                        <td>2.3%</td>
+                        <td><strong>34.7%</strong></td>
                         <td>🔴 HIGH</td>
                     </tr>
                     <tr>
                         <td>Mexico General</td>
                         <td>0%</td>
-                        <td><strong>25%</strong></td>
+                        <td><strong>25%</strong> (USMCA exempt)</td>
                         <td>🟡 MODERATE</td>
                     </tr>
                     <tr>
                         <td>India Textiles</td>
                         <td>0%</td>
                         <td><strong>50%</strong></td>
-                        <td>🔴 HIGH</td>
+                        <td>🔴 EXTREME</td>
                     </tr>
                     <tr>
                         <td>Vietnam General</td>
@@ -615,14 +647,14 @@
                     </tr>
                     <tr>
                         <td>Steel/Aluminum (All)</td>
-                        <td>10%</td>
-                        <td><strong>50%</strong></td>
+                        <td>25%</td>
+                        <td><strong>39.8%</strong></td>
                         <td>🔴 CRITICAL</td>
                     </tr>
                     <tr>
-                        <td>Autos/Parts (All)</td>
+                        <td>Automotive Parts</td>
                         <td>2.5%</td>
-                        <td><strong>25%</strong></td>
+                        <td><strong>15.3%</strong></td>
                         <td>🟡 MODERATE</td>
                     </tr>
                     <tr>
@@ -632,9 +664,9 @@
                         <td>🔴 EXTREME</td>
                     </tr>
                     <tr>
-                        <td>Other</td>
+                        <td>Canada General</td>
                         <td>0%</td>
-                        <td><strong>10%</strong></td>
+                        <td><strong>0.1%</strong> (USMCA exempt)</td>
                         <td>🟢 LOW</td>
                     </tr>
                 </tbody>
@@ -647,135 +679,150 @@
     <!-- FAQ -->
     <section class="section">
         <div class="container">
-            <h2>Frequently Asked Questions About Tariffs & Import Duties</h2>
+            <h2>Frequently Asked Questions</h2>
             
             <div class="faq">
                 <div class="faq-item">
                     <div class="faq-question">What is a tariff calculator?</div>
-                    <div class="faq-answer">A tariff calculator is a tool that helps e-commerce sellers calculate import duties and taxes on products imported from other countries. It uses your product cost, country of origin, and HTS code to determine the exact tariff rate and landed cost. TariffSnap is a tariff calculator specifically designed for Shopify, Amazon FBA, and Etsy sellers.</div>
+                    <div class="faq-answer">A tariff calculator is a tool that helps e-commerce sellers calculate import duties and taxes on products imported from other countries. It uses your product cost, country of origin, and product category to determine the exact tariff rate and landed cost. TariffSnap is a free tariff calculator specifically designed for Shopify, Amazon FBA, and Etsy sellers.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">How do I calculate landed cost?</div>
-                    <div class="faq-answer">To calculate landed cost, add your product cost + shipping cost + (product cost × tariff rate) + any additional fees. For example, a $10 product from China with 30% tariff and $2 shipping = $10 + $2 + ($10 × 0.30) = $15 landed cost. This is the true cost of getting your product to your warehouse.</div>
+                    <div class="faq-answer">To calculate landed cost, add your product cost + shipping cost + (product cost × tariff rate) + any additional fees. For example, a $10 product from China with 34.7% tariff and $2 shipping = $10 + $2 + ($10 × 0.347) = $15.47 landed cost. This is the true cost of getting your product to your warehouse.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">What are the current tariff rates for China?</div>
-                    <div class="faq-answer">As of January 2026, China tariff rates are: General products 30%, Electronics 30%, Textiles 30%, and Postal shipments under $800 are 54%. These rates apply to most e-commerce imports from China to the United States. Use our tariff calculator to see how these rates affect your specific products.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">What is an HTS code?</div>
-                    <div class="faq-answer">An HTS code (Harmonized Tariff Schedule code) is a 10-digit number that classifies your product for customs purposes. Every product has an HTS code, and the code determines the tariff rate you'll pay. For example, a cotton t-shirt has a different HTS code and tariff rate than a polyester t-shirt. Our tariff calculator helps you find the correct HTS code for your products.</div>
+                    <div class="faq-answer">As of February 2026, China's effective tariff rate is 34.7% for most products, up from 2.3% in January 2025. Postal shipments under $800 face a 54% tariff rate. These dramatic increases have significantly impacted e-commerce profit margins. Use our free calculator above to see how these rates affect your specific products.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">Does TariffSnap work with Shopify, Amazon FBA, and Etsy?</div>
-                    <div class="faq-answer">Yes, TariffSnap works with all e-commerce platforms including Shopify, Amazon FBA, Etsy, WooCommerce, and any platform that can export product data to CSV format. Simply upload your SKU list and get instant tariff calculations for your entire catalog.</div>
+                    <div class="faq-answer">Yes, TariffSnap works with all e-commerce platforms including Shopify, Amazon FBA, Etsy, WooCommerce, and any platform that can export product data to CSV format. Use our free calculator for quick estimates, or upgrade to the $59 audit to analyze your entire catalog at once.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">Why did my tariff rate change in 2026?</div>
-                    <div class="faq-answer">Tariff rates changed significantly in 2026 due to new trade policies. China tariffs increased from 25% to 30% for most products, Mexico tariffs went from 0% to 25%, and India textile tariffs jumped to 50%. These changes have a major impact on e-commerce profit margins, which is why you need to recalculate your landed costs now.</div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">What is de minimis?</div>
-                    <div class="faq-answer">De minimis is the threshold below which imported goods are exempt from duties and taxes. In the US, the de minimis value used to be $800, meaning shipments under $800 were duty-free. However, as of 2026, postal shipments from China under $800 now have a 54% tariff, effectively eliminating the de minimis benefit for Chinese dropshipping.</div>
+                    <div class="faq-answer">Tariff rates changed dramatically in 2026 due to new trade policies. China tariffs increased from 2.3% to 34.7% for most products, Mexico tariffs went from 0% to 25% (though USMCA exemptions apply to 89% of imports), and India textile tariffs jumped to 50%. These changes have a major impact on e-commerce profit margins, which is why you need to recalculate your landed costs now.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">How can I reduce my import duties?</div>
-                    <div class="faq-answer">To reduce import duties, consider: (1) Sourcing from countries with lower tariff rates like Vietnam (20%) instead of China (30%), (2) Reclassifying products under a different HTS code with a lower rate, (3) Using duty drawback programs if you re-export products, or (4) Discontinuing high-tariff products that are no longer profitable. Our tariff audit shows you exactly which products to keep, kill, or reprice.</div>
+                    <div class="faq-answer">To reduce import duties, consider: (1) Sourcing from countries with lower tariff rates like Vietnam (20%) or Canada (0.1%) instead of China (34.7%), (2) Leveraging USMCA exemptions for Mexico/Canada imports, (3) Reclassifying products under a different HTS code with a lower rate, or (4) Discontinuing high-tariff products that are no longer profitable. Our $59 tariff audit shows you exactly which products to keep, kill, or reprice.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is the free calculator really free?</div>
+                    <div class="faq-answer">Yes! Our free tariff calculator requires no signup, no credit card, and no hidden fees. Calculate as many individual products as you need. If you want to analyze 50 SKUs at once with detailed KEEP/KILL/CHANGE PRICE recommendations, that's our optional $59 audit service.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Are these tariff rates accurate?</div>
+                    <div class="faq-answer">Our tariff rates are updated as of February 3, 2026, based on data from the Penn Wharton Budget Model and USITC DataWeb. However, tariff rates can change, and specific products may have different rates based on their HTS code. Always verify with your customs broker for your specific situation. This tool is for educational purposes and not legal or financial advice.</div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section section-alt">
-        <div class="container">
-            <h2>What E-Commerce Store Owners Say</h2>
-            
-            <div class="testimonials">
-                <div class="testimonial">
-                    <div class="testimonial-text">"Killed 12 SKUs on Shopify and saved $6,240/month in tariff costs. My profit margin went from 12% to 28% on some products. TariffSnap paid for itself in the first hour."</div>
-                    <div class="testimonial-author">— Mike S., Shopify Store Owner</div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-text">"Fixed my Amazon FBA margins - now I know exactly what I'm paying in duties. I was losing $800/month on 3 SKUs and didn't even know it. The landed cost calculator is a game-changer."</div>
-                    <div class="testimonial-author">— Sarah T., Amazon FBA Seller</div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-text">"Finally understand my Etsy wholesale costs with accurate tariff calculations. I raised prices on 8 products and my customers didn't even blink. Wish I'd done this sooner."</div>
-                    <div class="testimonial-author">— Raj P., Etsy Shop Owner</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Related Resources -->
-    <section class="section">
-        <div class="container">
-            <h2>Learn More About Tariffs & Import Duties</h2>
-            <p style="text-align: center; margin-bottom: 40px;">Read our in-depth guides on calculating tariffs, understanding HTS codes, and optimizing your e-commerce sourcing strategy.</p>
-            
-            <div class="features">
-                <div class="feature">
-                    <h3>Platform-Specific Guides</h3>
-                    <ul>
-                        <li><a href="/blog/import-duty-calculator-for-shopify-stores.html" style="color: #1e3a8a;">Import Duty Calculator for Shopify Stores</a></li>
-                        <li><a href="/blog/how-to-calculate-tariffs-for-amazon-fba-products.html" style="color: #1e3a8a;">How to Calculate Tariffs for Amazon FBA</a></li>
-                        <li><a href="/blog/tariff-cost-calculator-for-etsy-woocommerce-sellers.html" style="color: #1e3a8a;">Tariff Calculator for Etsy & WooCommerce</a></li>
-                    </ul>
-                </div>
-
-                <div class="feature">
-                    <h3>Sourcing Strategy</h3>
-                    <ul>
-                        <li><a href="/blog/china-vs-mexico-vs-vietnam-where-to-source-in-2026.html" style="color: #1e3a8a;">China vs Mexico vs Vietnam: Where to Source</a></li>
-                        <li><a href="/blog/how-to-identify-money-losing-skus-due-to-tariffs.html" style="color: #1e3a8a;">How to Identify Money-Losing SKUs</a></li>
-                        <li><a href="/blog/2026-us-import-tariff-rates-complete-list-for-e-commerce.html" style="color: #1e3a8a;">2026 US Import Tariff Rates: Complete List</a></li>
-                    </ul>
-                </div>
-
-                <div class="feature">
-                    <h3>Technical Guides</h3>
-                    <ul>
-                        <li><a href="/blog/understanding-hts-codes-and-how-they-affect-your-tariff-rate.html" style="color: #1e3a8a;">Understanding HTS Codes</a></li>
-                        <li><a href="/blog/how-to-calculate-import-tariffs-for-e-commerce-products.html" style="color: #1e3a8a;">How to Calculate Import Tariffs</a></li>
-                        <li><a href="/blog/case-study-how-one-shopify-store-saved-6k-month-by-auditing-tariffs.html" style="color: #1e3a8a;">Case Study: $6k/Month Savings</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="section section-alt">
-        <div class="container" style="text-align: center;">
-            <h2>Stop Losing Money to Hidden Tariff Costs</h2>
-            <p style="font-size: 20px; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Get your complete tariff audit for $59 (normally $149). Upload your CSV and receive your KEEP/KILL/CHANGE PRICE report in 2 minutes.</p>
-            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Your Audit Now</a>
-            <p style="margin-top: 20px; font-size: 16px; color: #6b7280;">Upload your CSV → Pay $59 → Get your full tariff report in 2 minutes</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>© 2026 TariffSnap. All rights reserved.</p>
-            <p style="margin-top: 10px;">Contact: <a href="mailto:tariffsnap@gmail.com">tariffsnap@gmail.com</a></p>
-            <p style="margin-top: 20px; font-size: 14px;">
-                <a href="/">Home</a> | 
-                <a href="/tariff-calculator/">Calculator</a> | 
-                <a href="/pricing/">Pricing</a> | 
+            <p>&copy; 2026 TariffSnap. All rights reserved.</p>
+            <p style="margin-top: 15px;">
+                <a href="/">Home</a>
+                <a href="/tariff-calculator/">Calculator</a>
+                <a href="/pricing/">Pricing</a>
                 <a href="/blog/">Blog</a>
+                <a href="mailto:tariffsnap@gmail.com">Contact</a>
             </p>
         </div>
     </footer>
+
+    <script>
+        // Tariff rates database (updated February 2026)
+        const tariffRates = {
+            'CN': {
+                'general': 34.7,
+                'electronics': 34.7,
+                'textiles': 34.7,
+                'steel_aluminum': 39.8,
+                'automotive': 34.7
+            },
+            'MX': {
+                'general': 25.0,
+                'electronics': 25.0,
+                'textiles': 25.0,
+                'steel_aluminum': 39.8,
+                'automotive': 15.3
+            },
+            'IN': {
+                'general': 25.0,
+                'electronics': 25.0,
+                'textiles': 50.0,
+                'steel_aluminum': 39.8,
+                'automotive': 25.0
+            },
+            'VN': {
+                'general': 20.0,
+                'electronics': 20.0,
+                'textiles': 20.0,
+                'steel_aluminum': 39.8,
+                'automotive': 20.0
+            },
+            'CA': {
+                'general': 0.1,
+                'electronics': 0.1,
+                'textiles': 0.1,
+                'steel_aluminum': 39.8,
+                'automotive': 0.1
+            },
+            'DE': {
+                'general': 1.38,
+                'electronics': 1.38,
+                'textiles': 1.38,
+                'steel_aluminum': 39.8,
+                'automotive': 1.38
+            },
+            'JP': {
+                'general': 1.5,
+                'electronics': 1.5,
+                'textiles': 1.5,
+                'steel_aluminum': 39.8,
+                'automotive': 1.5
+            },
+            'OTHER': {
+                'general': 10.5,
+                'electronics': 10.5,
+                'textiles': 10.5,
+                'steel_aluminum': 39.8,
+                'automotive': 15.3
+            }
+        };
+
+        document.getElementById('tariffCalc').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const productValue = parseFloat(document.getElementById('productValue').value);
+            const country = document.getElementById('country').value;
+            const category = document.getElementById('category').value;
+            const shipping = parseFloat(document.getElementById('shipping').value) || 0;
+            
+            // Get tariff rate
+            const tariffRate = tariffRates[country][category];
+            const tariffAmount = productValue * (tariffRate / 100);
+            const landedCost = productValue + tariffAmount + shipping;
+            
+            // Display results
+            document.getElementById('resProductValue').textContent = '$' + productValue.toFixed(2);
+            document.getElementById('resTariffRate').textContent = tariffRate.toFixed(1) + '%';
+            document.getElementById('resTariffAmount').textContent = '$' + tariffAmount.toFixed(2);
+            document.getElementById('resShipping').textContent = '$' + shipping.toFixed(2);
+            document.getElementById('resLandedCost').textContent = '$' + landedCost.toFixed(2);
+            
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
 </body>
 </html>

@@ -11,8 +11,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <meta name="description" content="Tariff calculator for e-commerce businesses. Learn how to calculate import duties, tariffs, and landed costs for products from China, Mexico, India, Vietnam. Educational guide for Shopify, Amazon FBA, Etsy sellers.">
-    <title>Tariff Calculator — Import Duty & Landed Cost Calculator for E-Commerce</title>
+    <meta name="description" content="Free tariff calculator for e-commerce. Calculate import duties and landed costs instantly for Shopify, Amazon FBA, and Etsy. Updated February 2026 tariff rates for China, Mexico, India, Vietnam.">
+    <title>Free Tariff Calculator — Import Duty & Landed Cost Calculator for E-Commerce</title>
     <style>
         * {
             margin: 0;
@@ -69,8 +69,7 @@
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 80px 20px;
-            text-align: center;
+            padding: 60px 20px 80px 20px;
         }
 
         .hero h1 {
@@ -78,65 +77,168 @@
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #10b981;
-            color: white;
-            padding: 18px 40px;
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .cta-button:hover {
-            background: #059669;
-            transform: translateY(-2px);
-        }
-
-        /* Calculator Section */
-        .calculator-section {
-            background: white;
-            padding: 60px 20px;
-        }
-
-        .calculator-box {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #f9fafb;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .calculator-box h2 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            color: #1e3a8a;
             text-align: center;
         }
 
-        .info-box {
-            background: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
+        .hero .subheadline {
+            font-size: 22px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
         }
 
-        .info-box p {
-            color: #92400e;
+        /* Calculator Box */
+        .calculator-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            color: #1f2937;
+        }
+
+        .calculator-box h2 {
+            color: #1e3a8a;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .calculator-box .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .calc-form {
+            display: grid;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
             font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .calc-button {
+            background: #10b981;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+
+        .calc-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+
+        .calc-results {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f0fdf4;
+            border-radius: 12px;
+            border: 2px solid #10b981;
+            display: none;
+        }
+
+        .calc-results.show {
+            display: block;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #d1fae5;
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1e3a8a;
+            padding-top: 20px;
+            margin-top: 10px;
+            border-top: 2px solid #10b981;
+        }
+
+        .result-label {
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .result-value {
+            color: #1e3a8a;
+            font-weight: 700;
+        }
+
+        .upgrade-cta {
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+        }
+
+        .upgrade-cta h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .upgrade-cta p {
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+
+        .upgrade-cta a {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .upgrade-cta a:hover {
+            background: #059669;
+            transform: translateY(-2px);
         }
 
         /* Features */
@@ -235,6 +337,24 @@
             margin-bottom: 30px;
         }
 
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 18px 40px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+
         /* Footer */
         footer {
             background: #1f2937;
@@ -255,6 +375,9 @@
             nav {
                 display: none;
             }
+            .calculator-box {
+                padding: 30px 20px;
+            }
         }
     </style>
     
@@ -263,13 +386,13 @@
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "TariffSnap Tariff Calculator",
+      "name": "TariffSnap Free Tariff Calculator",
       "url": "https://tariffsnap.com/tariff-calculator/",
-      "description": "Learn how to calculate import duties and landed costs for e-commerce. Educational tariff calculator guide for products from China, Mexico, Vietnam, and other countries.",
+      "description": "Free tariff calculator for e-commerce. Calculate import duties and landed costs instantly for products from China, Mexico, Vietnam, and other countries. Updated February 2026 rates.",
       "applicationCategory": "BusinessApplication",
       "offers": {
         "@type": "Offer",
-        "price": "59",
+        "price": "0",
         "priceCurrency": "USD"
       }
     }
@@ -288,50 +411,85 @@
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero with Calculator -->
     <section class="hero">
         <div class="container">
-            <h1>Tariff Calculator for E-Commerce</h1>
-            <p>Calculate import duties, tariffs, and landed costs for your products instantly</p>
-            <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Get Full Tariff Audit →</a>
-        </div>
-    </section>
-
-    <!-- Calculator Info -->
-    <section class="calculator-section">
-        <div class="container">
+            <h1>Free Tariff Calculator for E-Commerce</h1>
+            <p class="subheadline">Calculate import duties and landed costs instantly. Updated February 2026 rates for China, Mexico, India, Vietnam, and more.</p>
+            
             <div class="calculator-box">
-                <h2>How to Calculate Import Tariffs</h2>
+                <h2>🧮 Calculate Your Tariff Now</h2>
+                <p class="subtitle">Free • No signup required • Instant results</p>
                 
-                <div class="info-box">
-                    <p>💡 Want instant calculations for up to 50 SKUs? Get our complete tariff audit for $59 (normally $149) with KEEP/KILL/CHANGE PRICE recommendations.</p>
-                </div>
-
-                <h3 style="font-size: 24px; margin-bottom: 20px; color: #374151;">Manual Calculation Formula:</h3>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
-                    <p style="font-size: 18px; font-weight: 600; margin-bottom: 15px;">Landed Cost = Product Cost + Shipping + (Product Cost × Tariff Rate)</p>
+                <form class="calc-form" id="tariffCalc">
+                    <div class="form-group">
+                        <label for="productValue">Product Value (USD)</label>
+                        <input type="number" id="productValue" placeholder="e.g., 10.00" step="0.01" required>
+                    </div>
                     
-                    <p style="margin-bottom: 10px;"><strong>Example:</strong></p>
-                    <ul style="margin-left: 20px; color: #6b7280;">
-                        <li>Product cost from China: $10</li>
-                        <li>Shipping: $2</li>
-                        <li>China tariff rate: 30%</li>
-                        <li><strong>Tariff amount:</strong> $10 × 0.30 = $3</li>
-                        <li><strong>Total landed cost:</strong> $10 + $2 + $3 = $15</li>
-                    </ul>
+                    <div class="form-group">
+                        <label for="country">Country of Origin</label>
+                        <select id="country" required>
+                            <option value="">Select country...</option>
+                            <option value="CN">China</option>
+                            <option value="MX">Mexico</option>
+                            <option value="IN">India</option>
+                            <option value="VN">Vietnam</option>
+                            <option value="CA">Canada</option>
+                            <option value="DE">Germany</option>
+                            <option value="JP">Japan</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="category">Product Category</label>
+                        <select id="category" required>
+                            <option value="">Select category...</option>
+                            <option value="general">General Products</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="textiles">Textiles & Apparel</option>
+                            <option value="steel_aluminum">Steel & Aluminum</option>
+                            <option value="automotive">Automotive Parts</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="shipping">Shipping Cost (USD)</label>
+                        <input type="number" id="shipping" placeholder="e.g., 2.00" step="0.01" value="0">
+                    </div>
+                    
+                    <button type="submit" class="calc-button">Calculate Landed Cost →</button>
+                </form>
+                
+                <div class="calc-results" id="results">
+                    <div class="result-row">
+                        <span class="result-label">Product Value:</span>
+                        <span class="result-value" id="resProductValue">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Tariff Rate:</span>
+                        <span class="result-value" id="resTariffRate">0%</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Tariff Amount:</span>
+                        <span class="result-value" id="resTariffAmount">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Shipping Cost:</span>
+                        <span class="result-value" id="resShipping">$0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Landed Cost:</span>
+                        <span class="result-value" id="resLandedCost">$0.00</span>
+                    </div>
+                    
+                    <div class="upgrade-cta">
+                        <h3>📊 Need to analyze 50 SKUs at once?</h3>
+                        <p>Get a complete tariff audit with KEEP/KILL/CHANGE PRICE recommendations for your entire product catalog.</p>
+                        <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank">Get Your $59 Audit Report →</a>
+                    </div>
                 </div>
-
-                <h3 style="font-size: 24px; margin-bottom: 20px; color: #374151;">What You Need:</h3>
-                <ul style="margin-left: 20px; margin-bottom: 30px; color: #6b7280;">
-                    <li>Product cost (FOB price from supplier)</li>
-                    <li>Country of origin</li>
-                    <li>Product category (general, electronics, textiles, etc.)</li>
-                    <li>Shipping cost</li>
-                    <li>Current tariff rate (see table below)</li>
-                </ul>
-
-                <a href="https://docs.google.com/forms/d/1lbOdmatdx0Gg20ttcc-32qgsOBwYUSt8tE8H6HkCFBs/viewform" target="_blank" class="cta-button">Calculate 50 SKUs Instantly →</a>
             </div>
         </div>
     </section>
@@ -372,7 +530,8 @@
     <!-- Tariff Table -->
     <section class="tariff-table">
         <div class="container">
-            <h2>Current US Import Tariff Rates (2026)</h2>
+            <h2>Current US Import Tariff Rates (February 2026)</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Updated tariff rates as of February 3, 2026. Source: Penn Wharton Budget Model / USITC DataWeb.</p>
             <table>
                 <thead>
                     <tr>
@@ -384,53 +543,53 @@
                 <tbody>
                     <tr>
                         <td>China General</td>
-                        <td>30%</td>
+                        <td><strong>34.7%</strong></td>
                         <td>Most consumer goods</td>
                     </tr>
                     <tr>
                         <td>China Electronics</td>
-                        <td>30%</td>
+                        <td><strong>34.7%</strong></td>
                         <td>Phones, laptops, accessories</td>
                     </tr>
                     <tr>
                         <td>China Textiles</td>
-                        <td>30%</td>
+                        <td><strong>34.7%</strong></td>
                         <td>Clothing, fabrics, home textiles</td>
                     </tr>
                     <tr>
                         <td>Postal China (&lt;$800)</td>
-                        <td>54%</td>
+                        <td><strong>54%</strong></td>
                         <td>Small packages, dropshipping</td>
                     </tr>
                     <tr>
                         <td>Mexico General</td>
-                        <td>25%</td>
-                        <td>Most products</td>
+                        <td><strong>25%</strong></td>
+                        <td>Most products (USMCA exempt)</td>
                     </tr>
                     <tr>
                         <td>India Textiles</td>
-                        <td>50%</td>
+                        <td><strong>50%</strong></td>
                         <td>Clothing, fabrics</td>
                     </tr>
                     <tr>
                         <td>Vietnam General</td>
-                        <td>20%</td>
+                        <td><strong>20%</strong></td>
                         <td>Most products</td>
                     </tr>
                     <tr>
                         <td>Steel/Aluminum</td>
-                        <td>50%</td>
+                        <td><strong>39.8%</strong></td>
                         <td>Metal products, furniture</td>
                     </tr>
                     <tr>
-                        <td>Autos/Parts</td>
-                        <td>25%</td>
+                        <td>Automotive Parts</td>
+                        <td><strong>15.3%</strong></td>
                         <td>Car parts, accessories</td>
                     </tr>
                     <tr>
-                        <td>Other Countries</td>
-                        <td>10%</td>
-                        <td>General imports</td>
+                        <td>Canada General</td>
+                        <td><strong>0.1%</strong></td>
+                        <td>Most products (USMCA exempt)</td>
                     </tr>
                 </tbody>
             </table>
@@ -464,5 +623,91 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        // Tariff rates database (updated February 2026)
+        const tariffRates = {
+            'CN': {
+                'general': 34.7,
+                'electronics': 34.7,
+                'textiles': 34.7,
+                'steel_aluminum': 39.8,
+                'automotive': 34.7
+            },
+            'MX': {
+                'general': 25.0,
+                'electronics': 25.0,
+                'textiles': 25.0,
+                'steel_aluminum': 39.8,
+                'automotive': 15.3
+            },
+            'IN': {
+                'general': 25.0,
+                'electronics': 25.0,
+                'textiles': 50.0,
+                'steel_aluminum': 39.8,
+                'automotive': 25.0
+            },
+            'VN': {
+                'general': 20.0,
+                'electronics': 20.0,
+                'textiles': 20.0,
+                'steel_aluminum': 39.8,
+                'automotive': 20.0
+            },
+            'CA': {
+                'general': 0.1,
+                'electronics': 0.1,
+                'textiles': 0.1,
+                'steel_aluminum': 39.8,
+                'automotive': 0.1
+            },
+            'DE': {
+                'general': 1.38,
+                'electronics': 1.38,
+                'textiles': 1.38,
+                'steel_aluminum': 39.8,
+                'automotive': 1.38
+            },
+            'JP': {
+                'general': 1.5,
+                'electronics': 1.5,
+                'textiles': 1.5,
+                'steel_aluminum': 39.8,
+                'automotive': 1.5
+            },
+            'OTHER': {
+                'general': 10.5,
+                'electronics': 10.5,
+                'textiles': 10.5,
+                'steel_aluminum': 39.8,
+                'automotive': 15.3
+            }
+        };
+
+        document.getElementById('tariffCalc').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const productValue = parseFloat(document.getElementById('productValue').value);
+            const country = document.getElementById('country').value;
+            const category = document.getElementById('category').value;
+            const shipping = parseFloat(document.getElementById('shipping').value) || 0;
+            
+            // Get tariff rate
+            const tariffRate = tariffRates[country][category];
+            const tariffAmount = productValue * (tariffRate / 100);
+            const landedCost = productValue + tariffAmount + shipping;
+            
+            // Display results
+            document.getElementById('resProductValue').textContent = '$' + productValue.toFixed(2);
+            document.getElementById('resTariffRate').textContent = tariffRate.toFixed(1) + '%';
+            document.getElementById('resTariffAmount').textContent = '$' + tariffAmount.toFixed(2);
+            document.getElementById('resShipping').textContent = '$' + shipping.toFixed(2);
+            document.getElementById('resLandedCost').textContent = '$' + landedCost.toFixed(2);
+            
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
 </body>
 </html>
