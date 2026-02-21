@@ -399,6 +399,10 @@
     </script>
 </head>
 <body>
+    <!-- Breaking News Banner -->
+    <div style="background: #dc2626; color: white; text-align: center; padding: 12px 20px; font-size: 15px; font-weight: 600;">
+        &#128680; <strong>BREAKING (Feb 21, 2026):</strong> Supreme Court struck down Trump's IEEPA tariffs 6-3 &mdash; Trump responds with new <strong>15% global tariff</strong> under Section 122, effective Feb 24. <a href="https://tariffsnap.com/#tariff-news" style="color: #fef08a; text-decoration: underline;">Read latest updates &rarr;</a>
+    </div>
     <!-- Header -->
     <header>
         <div class="container">
@@ -415,7 +419,7 @@
     <section class="hero">
         <div class="container">
             <h1>Free Tariff Calculator for E-Commerce</h1>
-            <p class="subheadline">Calculate import duties and landed costs instantly. Updated February 2026 rates for China, Mexico, India, Vietnam, and more.</p>
+            <p class="subheadline">Calculate import duties and landed costs instantly. <strong>Rates updated Feb 21, 2026</strong> &mdash; reflecting Trump's new 15% global tariff after Supreme Court ruling.</p>
             
             <div class="calculator-box">
                 <h2>🧮 Calculate Your Tariff Now</h2>
@@ -530,8 +534,9 @@
     <!-- Tariff Table -->
     <section class="tariff-table">
         <div class="container">
-            <h2>Current US Import Tariff Rates (February 2026)</h2>
-            <p style="text-align: center; margin-bottom: 40px;">Updated tariff rates as of February 3, 2026. Source: Penn Wharton Budget Model / USITC DataWeb.</p>
+            <h2>Current US Import Tariff Rates (Updated Feb 21, 2026)</h2>
+            <p style="text-align: center; margin-bottom: 15px; color: #dc2626; font-weight: 600;">&#128680; BREAKING: Trump's new 15% global tariff (Section 122) takes effect February 24, 2026.</p>
+            <p style="text-align: center; margin-bottom: 40px;">Updated February 21, 2026. Source: White House Proclamation / CNBC / BBC.</p>
             <table>
                 <thead>
                     <tr>
@@ -541,6 +546,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr style="background: #fef2f2;">
+                        <td><strong>&#128680; All Countries (Global)</strong><br><small>Section 122 &mdash; eff. Feb 24, 2026</small></td>
+                        <td><strong style="color:#dc2626;">15%</strong> <span style="background:#dc2626;color:white;font-size:11px;padding:2px 6px;border-radius:4px;">NEW</span></td>
+                        <td>All imports (see exemptions)</td>
+                    </tr>
                     <tr>
                         <td>China General</td>
                         <td><strong>34.7%</strong></td>
@@ -567,18 +577,33 @@
                         <td>Most products (USMCA exempt)</td>
                     </tr>
                     <tr>
+                        <td>India General</td>
+                        <td><strong>15%</strong> <small>(global tariff)</small></td>
+                        <td>Most products</td>
+                    </tr>
+                    <tr>
                         <td>India Textiles</td>
                         <td><strong>50%</strong></td>
                         <td>Clothing, fabrics</td>
                     </tr>
                     <tr>
                         <td>Vietnam General</td>
-                        <td><strong>20%</strong></td>
+                        <td><strong>15%</strong> <small>(global tariff)</small></td>
+                        <td>Most products</td>
+                    </tr>
+                    <tr>
+                        <td>Germany / EU General</td>
+                        <td><strong>15%</strong> <small>(global tariff)</small></td>
+                        <td>Most products</td>
+                    </tr>
+                    <tr>
+                        <td>Japan General</td>
+                        <td><strong>15%</strong> <small>(global tariff)</small></td>
                         <td>Most products</td>
                     </tr>
                     <tr>
                         <td>Steel/Aluminum</td>
-                        <td><strong>39.8%</strong></td>
+                        <td><strong>39.8%</strong> <small>(Section 232)</small></td>
                         <td>Metal products, furniture</td>
                     </tr>
                     <tr>
@@ -587,7 +612,7 @@
                         <td>Car parts, accessories</td>
                     </tr>
                     <tr>
-                        <td>Canada General</td>
+                        <td>Canada General (USMCA)</td>
                         <td><strong>0.1%</strong></td>
                         <td>Most products (USMCA exempt)</td>
                     </tr>
@@ -625,7 +650,9 @@
     </footer>
 
     <script>
-        // Tariff rates database (updated February 2026)
+        // Tariff rates database (updated February 21, 2026)
+        // Reflects Trump's new 15% global tariff under Section 122, Trade Act of 1974
+        // Effective February 24, 2026 following Supreme Court 6-3 ruling striking down IEEPA tariffs
         const tariffRates = {
             'CN': {
                 'general': 34.7,
@@ -642,18 +669,18 @@
                 'automotive': 15.3
             },
             'IN': {
-                'general': 25.0,
-                'electronics': 25.0,
+                'general': 15.0,
+                'electronics': 15.0,
                 'textiles': 50.0,
                 'steel_aluminum': 39.8,
-                'automotive': 25.0
+                'automotive': 15.0
             },
             'VN': {
-                'general': 20.0,
-                'electronics': 20.0,
-                'textiles': 20.0,
+                'general': 15.0,
+                'electronics': 15.0,
+                'textiles': 15.0,
                 'steel_aluminum': 39.8,
-                'automotive': 20.0
+                'automotive': 15.0
             },
             'CA': {
                 'general': 0.1,
@@ -663,25 +690,25 @@
                 'automotive': 0.1
             },
             'DE': {
-                'general': 1.38,
-                'electronics': 1.38,
-                'textiles': 1.38,
+                'general': 15.0,
+                'electronics': 15.0,
+                'textiles': 15.0,
                 'steel_aluminum': 39.8,
-                'automotive': 1.38
+                'automotive': 15.0
             },
             'JP': {
-                'general': 1.5,
-                'electronics': 1.5,
-                'textiles': 1.5,
+                'general': 15.0,
+                'electronics': 15.0,
+                'textiles': 15.0,
                 'steel_aluminum': 39.8,
-                'automotive': 1.5
+                'automotive': 15.0
             },
             'OTHER': {
-                'general': 10.5,
-                'electronics': 10.5,
-                'textiles': 10.5,
+                'general': 15.0,
+                'electronics': 15.0,
+                'textiles': 15.0,
                 'steel_aluminum': 39.8,
-                'automotive': 15.3
+                'automotive': 15.0
             }
         };
 

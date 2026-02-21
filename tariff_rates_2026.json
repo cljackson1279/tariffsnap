@@ -1,11 +1,41 @@
 {
-  "lastUpdated": "2026-02-03",
-  "source": "Penn Wharton Budget Model / USITC DataWeb",
-  "averageEffectiveTariffRate": 10.5,
+  "lastUpdated": "2026-02-21",
+  "source": "White House Proclamation / CNBC / BBC / Politico / SCOTUSblog",
+  "averageEffectiveTariffRate": 15.0,
+  "breakingNews": {
+    "date": "2026-02-21",
+    "headline": "Trump raises global tariff to 15% after Supreme Court 6-3 ruling",
+    "summary": "The U.S. Supreme Court struck down Trump IEEPA tariffs 6-3 on February 20, 2026. Trump responded by imposing a new 10% global tariff under Section 122 of the Trade Act of 1974, then raised it to 15% on February 21. The new 15% rate is the legal maximum under Section 122 and is effective February 24, 2026.",
+    "sources": [
+      "https://www.cnbc.com/2026/02/21/trump-tariffs.html",
+      "https://www.bbc.com/news/articles/c8r1e327z46o",
+      "https://www.politico.com/news/2026/02/20/trump-tariffs-supreme-court-ruling-00790687"
+    ]
+  },
+  "globalTariff": {
+    "rate": 15.0,
+    "legalBasis": "Section 122, Trade Act of 1974",
+    "effectiveDate": "2026-02-24",
+    "duration": "150 days (requires Congressional approval for extension)",
+    "exemptions": [
+      "USMCA goods (Canada and Mexico)",
+      "Critical minerals and metals",
+      "Energy products and natural resources",
+      "Food crops",
+      "Pharmaceuticals",
+      "Electronics (certain categories)",
+      "Cars and trucks",
+      "Aerospace products",
+      "Informational materials (books, etc.)",
+      "Donations and accompanied baggage",
+      "Textiles from DR-CAFTA countries"
+    ]
+  },
   "countryRates": {
     "CN": {
       "name": "China",
       "effectiveRate": 34.7,
+      "note": "China tariffs remain under Section 232 and fentanyl emergency declarations - NOT affected by Supreme Court ruling",
       "categories": {
         "general": 34.7,
         "electronics": 34.7,
@@ -17,73 +47,100 @@
       "name": "Mexico",
       "effectiveRate": 25.0,
       "usmcaExemption": true,
+      "note": "USMCA goods exempt from new 15% global tariff",
       "categories": {
         "general": 25.0,
-        "automotive": 25.0
+        "automotive": 25.0,
+        "usmca_qualifying": 0.0
       }
     },
     "CA": {
       "name": "Canada",
       "effectiveRate": 0.1,
       "usmcaExemption": true,
+      "note": "USMCA goods exempt from new 15% global tariff",
       "categories": {
-        "general": 0.1
+        "general": 0.1,
+        "usmca_qualifying": 0.0
       }
     },
     "VN": {
       "name": "Vietnam",
-      "effectiveRate": 20.0,
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122 (previously 20% under IEEPA)",
       "categories": {
-        "general": 20.0,
-        "textiles": 20.0
+        "general": 15.0,
+        "textiles": 15.0
       }
     },
     "IN": {
       "name": "India",
-      "effectiveRate": 50.0,
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122 (textiles remain at 50%)",
       "categories": {
-        "textiles": 50.0,
-        "general": 25.0
+        "general": 15.0,
+        "textiles": 50.0
       }
     },
     "DE": {
-      "name": "Germany",
-      "effectiveRate": 1.38,
+      "name": "Germany / EU",
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122",
       "categories": {
-        "general": 1.38
+        "general": 15.0
       }
     },
     "JP": {
       "name": "Japan",
-      "effectiveRate": 1.5,
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122",
       "categories": {
-        "general": 1.5
+        "general": 15.0
+      }
+    },
+    "GB": {
+      "name": "United Kingdom",
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122",
+      "categories": {
+        "general": 15.0
       }
     },
     "IE": {
       "name": "Ireland",
-      "effectiveRate": 2.0,
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122",
       "categories": {
-        "general": 2.0
+        "general": 15.0
       }
     },
     "CH": {
       "name": "Switzerland",
-      "effectiveRate": 2.0,
+      "effectiveRate": 15.0,
+      "note": "Now subject to new 15% global tariff under Section 122",
       "categories": {
-        "general": 2.0
+        "general": 15.0
+      }
+    },
+    "OTHER": {
+      "name": "All Other Countries",
+      "effectiveRate": 15.0,
+      "note": "New 15% global tariff applies to all countries not covered by USMCA or specific exemptions",
+      "categories": {
+        "general": 15.0
       }
     }
   },
   "productCategories": {
     "steel_aluminum": {
-      "name": "Steel & Aluminum",
+      "name": "Steel and Aluminum",
       "rate": 39.8,
-      "note": "Section 232 tariffs plus June 4 increase from 25% to 50%"
+      "note": "Section 232 tariffs - NOT affected by Supreme Court ruling, remain in effect"
     },
     "automotive": {
-      "name": "Automotive Vehicles & Parts",
-      "rate": 15.3
+      "name": "Automotive Vehicles and Parts",
+      "rate": 15.3,
+      "note": "Section 232 tariffs - NOT affected by Supreme Court ruling"
     },
     "semiconductors": {
       "name": "Advanced Computing Chips",
@@ -91,7 +148,7 @@
       "effectiveDate": "2026-01-15"
     },
     "furniture": {
-      "name": "Upholstered Furniture/Kitchen Cabinets",
+      "name": "Upholstered Furniture and Kitchen Cabinets",
       "rate": 15.0,
       "effectiveDate": "2026-01-01"
     }
@@ -110,11 +167,22 @@
       "note": "Percentage of customs value for ocean shipments"
     }
   },
+  "refundSituation": {
+    "estimatedRefunds": "130-175 billion USD",
+    "status": "In dispute - no Supreme Court guidance on refunds",
+    "timeline": "Trump says locked up in litigation for years",
+    "court": "U.S. International Trade Court expected to decide"
+  },
   "notes": [
-    "Rates as of November 2025 (latest USITC data)",
-    "China effective rate: 34.7% (up from 2.3% in January 2025)",
-    "Mexico/Canada: USMCA exemptions apply to 89% of imports",
-    "India textiles: 50% rate effective 2026",
-    "Postal shipments from China under $800: 54% rate"
+    "BREAKING Feb 21, 2026: Trump raises global tariff to 15% under Section 122 after Supreme Court 6-3 ruling",
+    "Supreme Court struck down IEEPA tariffs on Feb 20, 2026 - ruling they were unconstitutional",
+    "New 15% global tariff effective February 24, 2026 at 12:01 AM EST",
+    "Section 122 allows max 15% tariff for 150 days - Congressional approval needed for extension",
+    "China effective rate 34.7% remains unchanged (Section 232 / fentanyl emergency)",
+    "Mexico/Canada: USMCA exemptions still apply - goods remain at near-0% rate",
+    "India, Vietnam, EU, Japan, UK: now face 15% global tariff (previously had negotiated rates)",
+    "Postal shipments from China under 800 USD: 54% rate (de minimis exemption remains eliminated)",
+    "Steel/Aluminum: 39.8% rate unchanged (Section 232)",
+    "U.S. government may owe 130-175 billion USD in refunds for now-illegal IEEPA tariffs"
   ]
 }
